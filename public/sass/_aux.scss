@@ -1,0 +1,293 @@
+// *********************************
+// * Constructor Mixins
+// *********************************
+@mixin setAttributesTo($val, $attributes...){
+  @each $el in $attributes {
+    &-#{$el} { #{$el}: $val;}
+  }
+}
+@mixin setAttributeRange($attribute, $pre, $units, $start, $end, $jump: 1, $modifier: 1){
+  $i: $start;
+  @while $i <= $end {
+    &-#{$i} { #{$attribute}: #{$pre}#{$i * $modifier}#{$units}; }
+    $i: $i + $jump;
+  }
+}
+@mixin setAttributeValues($attribute, $values...){
+  @each $el in $values {
+    &-#{$el} { #{$attribute}: $el;}
+  }
+}
+@mixin setTextColor($color_base, $color_name){  
+  &-#{$color_name} {
+    $i: 1;
+    @each $color in $color_base {
+      &-#{$i} { color: $color !important;}
+      $i: $i+1;
+    }
+  }
+}
+@mixin setBackgroundColor($color_base, $color_name){  
+  &-#{$color_name} {
+    $i: 1;
+    @each $color in $color_base {
+      &-#{$i} { background: $color !important;}
+      $i: $i+1;
+    }
+  }
+}
+@mixin setTextColor($color_base, $color_name){  
+  &-#{$color_name} {
+    $i: 1;
+    @each $color in $color_base {
+      &-#{$i} { color: $color !important;}
+      $i: $i+1;
+    }
+  }
+}
+// *********************************
+// * Quick Styles
+// *********************************
+.cursor {
+  &-pointer {cursor: pointer;}
+}
+.perfect {
+  &-center {
+    &-left {
+      &-up { @include transform(translate(-50%, -50%)); }
+      &-down { @include transform(translate(-50%, 50%)); }
+    }
+    &-right {
+      &-up { @include transform(translate(50%, -50%)); }
+      &-down { @include transform(translate(50%, 50%)); }
+    }
+  }
+}
+.flex {
+  @include flex;
+  &-center-items {
+    @include flex;
+    align-items: center;
+  }
+  &-center-content {
+    @include flex;
+    align-content: center;
+  }
+  &-center-perfect {
+    @include flex;
+    align-content: center;
+    align-items: center;
+  }
+  &-item {
+    &-grow { flex: 1 0 auto;}
+    &-no-grow { flex: 0 0 auto;}
+  }
+}
+.display {
+  &-block { display: block;}
+  &-none { display: none;}
+  &-inline{ display: inline-block;}
+}
+.z {
+  @include setAttributesTo(0, left, right, top, bottom);
+  &-index { @include setAttributeRange(z-index, '', '', 0, 10); }
+}
+.m {
+  @include setAttributesTo(50%, left, right, top, bottom);
+}
+.overflow {
+  @include setAttributeValues(overflow, hidden, visible, scroll);
+  &-y {
+    @include setAttributeValues(overflow-y, hidden, visible, scroll);
+  }
+}
+.opacity { @include setAttributeRange(z-index, '', '', 0, 10, 1, 0.1); }
+
+// *********************************
+// * Background
+// *********************************
+.b {
+  &-transparent { background: transparent; &:hover { background: transparent; } }
+  &-white { background: white; &:hover { background: white; } }
+  &-black { background: black; &:hover { background: black; } }
+  @include setBackgroundColor($gray, gray);
+  @include setBackgroundColor($blue, blue);
+  @include setBackgroundColor($green, green);
+  @include setBackgroundColor($yellow, yellow);
+  @include setBackgroundColor($red, red);
+  @include setBackgroundColor($pink, pink);
+  @include setBackgroundColor($purple, purple);
+}
+
+// *********************************
+// * Text
+// *********************************
+.t{
+  // Colors
+  &-transparent { color: transparent; }
+  &-white { color: white !important; }
+  &-black { color: black !important; }
+  @include setTextColor($gray, gray);
+  @include setTextColor($indigo, indigo);
+  @include setTextColor($blue, blue);
+  @include setTextColor($green, green);
+  @include setTextColor($yellow, yellow);
+  @include setTextColor($red, red);
+  @include setTextColor($pink, pink);
+  @include setTextColor($purple, purple);
+
+  // Weight
+  &-lightest { font-weight: $lightest !important }
+  &-lighter { font-weight: $lighter !important }
+  &-light { font-weight: $light !important }
+  &-regular { font-weight: $regular !important }
+  &-bold { font-weight: $bold !important }
+  &-bolder { font-weight: $bolder !important }
+  &-boldest { font-weight: $boldest !important }
+  
+  // Size
+  &-xxs { font-size: $xxs };
+  &-xs { font-size: $xs };
+  &-s { font-size: $s };
+  &-m { font-size: $m };
+  &-l { font-size: $l };
+  &-xl { font-size: $xl };
+  &-xxl { font-size: $xxl };
+  &-xxxl { font-size: $xxxl };
+
+  // Decorations
+  &-justify { text-align: justify; }
+  &-left { text-align: left; }
+  &-right { text-align: right; }
+  &-capitalize { text-transform: capitalize; }    
+  &-uppercase { text-transform: uppercase; }    
+  &-underlined { text-decoration: underline; }    
+  &-shadow { text-shadow: 1px 1px 1px grey; }
+  &-none { text-transform: none; }
+}
+
+// *********************************
+// * Removals
+// *********************************
+.no{
+  @include setAttributesTo(0 !important, margin, margin-left, margin-right, margin-top, margin-bottom);
+  @include setAttributesTo(0 !important, padding, padding-left, padding-right, padding-top, padding-bottom);
+  @include setAttributesTo(none !important, border, shadow);
+}
+
+// *********************************
+// * Dimensions
+// *********************************
+.height {
+  @include setAttributeRange(height, '', 'px !important', 0, 100, 10);
+  &-vh { @include setAttributeRange(height, '', 'vh !important', 0, 100, 10); }
+  &-vw { @include setAttributeRange(height, '', 'vw !important', 0, 100, 10); }
+  &-max { @include setAttributeRange(max-height, '', 'px !important', 0, 1000, 50); }   
+  &-min { @include setAttributeRange(min-height, '', 'px !important', 0, 1000, 50); }   
+  &-pct { @include setAttributeRange(height, '', '%', 0, 100, 5); }   
+  &-auto { height: auto !important; }
+}
+.width {
+  @include setAttributeRange(width, '', 'px !important', 0, 100, 10);
+  &-vh { @include setAttributeRange(width, '', 'vh !important', 0, 100, 10); }
+  &-vw { @include setAttributeRange(width, '', 'vw !important', 0, 100, 10); }
+  &-max { @include setAttributeRange(max-width, '', 'px !important', 0, 1000, 50); }   
+  &-min { @include setAttributeRange(min-width, '', 'px !important', 0, 1000, 50); }  
+  &-pct { @include setAttributeRange(width, '', '%', 0, 100, 5); }    
+  &-auto { width: auto !important; }
+}         
+.full {
+  @include setAttributesTo(100%, height, width);
+}
+
+// *********************************
+// * Positioning
+// *********************************
+.position { @include setAttributeValues(position, relative, absolute, fixed); }
+
+.float{
+  &-right{ float: right; }
+  &-left{ float: left; }
+}
+
+.padding {
+  &-all { @include setAttributeRange(padding, '', 'px', 0, 50, 5); 
+    &-pct { @include setAttributeRange(padding, '', '%', 0, 50, 5); }
+    &-vh { @include setAttributeRange(padding, '', 'vh', 0, 50, 5); }
+    &-vw { @include setAttributeRange(padding, '', 'vw', 0, 50, 5); }
+  }
+  &-top { @include setAttributeRange(padding-top, '', 'px', 0, 150, 5); 
+    &-pct { @include setAttributeRange(padding-top, '', '%', 0, 50, 5); }
+    &-vh { @include setAttributeRange(padding-top, '', 'vh', 0, 50, 5); }
+    &-vw { @include setAttributeRange(padding-top, '', 'vw', 0, 50, 5); }
+  }
+  &-bottom { @include setAttributeRange(padding-bottom, '', 'px', 0, 150, 5); 
+    &-pct { @include setAttributeRange(padding-bottom, '', '%', 0, 50, 5); }
+    &-vh { @include setAttributeRange(padding-bottom, '', 'vh', 0, 50, 5); }
+    &-vw { @include setAttributeRange(padding-bottom, '', 'vw', 0, 50, 5); }
+  }
+  &-left { @include setAttributeRange(padding-left, '', 'px', 0, 150, 5); 
+    &-pct { @include setAttributeRange(padding-left, '', '%', 0, 50, 5); }
+    &-vh { @include setAttributeRange(padding-left, '', 'vh', 0, 50, 5); }
+    &-vw { @include setAttributeRange(padding-left, '', 'vw', 0, 50, 5); }
+  }
+  &-right { @include setAttributeRange(padding-right, '', 'px', 0, 150, 5); 
+    &-pct { @include setAttributeRange(padding-right, '', '%', 0, 50, 5); }
+    &-vh { @include setAttributeRange(padding-right, '', 'vh', 0, 50, 5); }
+    &-vw { @include setAttributeRange(padding-right, '', 'vw', 0, 50, 5); }
+  }
+  &-sides { @include setAttributeRange(padding, '0 ', 'px', 0, 100, 5); 
+    &-pct { @include setAttributeRange(padding, '0 ', '%', 0, 50, 5); }
+    &-vh { @include setAttributeRange(padding, '0 ', 'vh', 0, 50, 5); }
+    &-vw { @include setAttributeRange(padding, '0 ', 'vw', 0, 50, 5); }
+  }
+  &-clear { @include setAttributeRange(padding, '', 'px 0', 0, 100, 5); 
+    &-pct { @include setAttributeRange(padding, '', '% 0', 0, 50, 5); }
+    &-vh { @include setAttributeRange(padding, '', 'vh 0', 0, 50, 5); }
+    &-vw { @include setAttributeRange(padding, '', 'vw 0', 0, 50, 5); }
+  }
+  &-z-auto { padding: 0 auto !important; }
+}
+.margin {
+  &-all { @include setAttributeRange(margin, '', 'px', 0, 50, 5); 
+    &-pct { @include setAttributeRange(margin, '', '%', 0, 50, 5); }
+    &-vh { @include setAttributeRange(margin, '', 'vh', 0, 50, 5); }
+    &-vw { @include setAttributeRange(margin, '', 'vw', 0, 50, 5); }
+  }
+  &-top { @include setAttributeRange(margin-top, '', 'px', 0, 150, 5); 
+    &-pct { @include setAttributeRange(margin-top, '', '%', 0, 50, 5); }
+    &-vh { @include setAttributeRange(margin-top, '', 'vh', 0, 50, 5); }
+    &-vw { @include setAttributeRange(margin-top, '', 'vw', 0, 50, 5); }
+  }
+  &-bottom { @include setAttributeRange(margin-bottom, '', 'px', 0, 150, 5); 
+    &-pct { @include setAttributeRange(margin-bottom, '', '%', 0, 50, 5); }
+    &-vh { @include setAttributeRange(margin-bottom, '', 'vh', 0, 50, 5); }
+    &-vw { @include setAttributeRange(margin-bottom, '', 'vw', 0, 50, 5); }
+  }
+  &-left { @include setAttributeRange(margin-left, '', 'px', 0, 150, 5); 
+    &-pct { @include setAttributeRange(margin-left, '', '%', 0, 50, 5); }
+    &-vh { @include setAttributeRange(margin-left, '', 'vh', 0, 50, 5); }
+    &-vw { @include setAttributeRange(margin-left, '', 'vw', 0, 50, 5); }
+  }
+  &-right { @include setAttributeRange(margin-right, '', 'px', 0, 150, 5); 
+    &-pct { @include setAttributeRange(margin-right, '', '%', 0, 50, 5); }
+    &-vh { @include setAttributeRange(margin-right, '', 'vh', 0, 50, 5); }
+    &-vw { @include setAttributeRange(margin-right, '', 'vw', 0, 50, 5); }
+  }
+  &-sides { @include setAttributeRange(margin, '0 ', 'px', 0, 100, 5); 
+    &-pct { @include setAttributeRange(margin, '0 ', '%', 0, 50, 5); }
+    &-vh { @include setAttributeRange(margin, '0 ', 'vh', 0, 50, 5); }
+    &-vw { @include setAttributeRange(margin, '0 ', 'vw', 0, 50, 5); }
+  }
+  &-clear { @include setAttributeRange(margin, '', 'px 0', 0, 100, 5); 
+    &-pct { @include setAttributeRange(margin, '', '% 0', 0, 50, 5); }
+    &-vh { @include setAttributeRange(margin, '', 'vh 0', 0, 50, 5); }
+    &-vw { @include setAttributeRange(margin, '', 'vw 0', 0, 50, 5); }
+  }
+  &-z-auto { margin: 0 auto !important; }
+}
+
+// *********************************
+// * Border
+// *********************************
+.rounded { @include setAttributeRange(border-radius, '', 'px', 0, 45, 1); }

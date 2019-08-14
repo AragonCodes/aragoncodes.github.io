@@ -1,0 +1,68 @@
+/**************************************/
+/************* values **************/
+  
+// Path
+$__IMG: "/public/img/";
+$__LOGO: "/public/img/logo/";
+$__VIDEO: "/public/video/";
+$__ICONS: "/public/img/icons/";
+$__GALLERY: "/public/img/gallery/";
+$__BG: "/public/img/bg/";
+
+// Colors
+$gray: (#343434, #757575, #9E9E9E, #BDBDBD, #191919);
+$indigo: (#303F9F,#3F51B5, #303F9F, #C5CAE9);
+
+$blue: (#7ae2d5, #DDFAFC, #A6E7E2, #EDF0F7);
+$green: (#74BEC3, #71CCB7);
+$yellow: (#f6ff00, #f4e34b, #E8D846);
+$red: (#c43f5b);
+$purple: (#2100D6, #3134CE, #8D8BFF, #888DFF, #7A73CE, #564CE0, #1D1682, #8E64FF, #38217D);
+$orange: (#FFA75C, #FFBD91, #E79D56, #FE7333);
+$pink: (#FF83E7, #C84784, #CE5F76, #F3C4C6, #E7C5CA, #CF83FF, #E49DFF, #D754AD, #F96785, #C05BB6);
+
+// Font Weight
+$lightest: 200;  
+$lighter: 300;
+$light: 400;
+$regular: 500;
+$bold: 600;
+$bolder: 700;
+$boldest: 800;
+
+// Font Size
+$xxxl: 4.5rem;
+$xxl: 2.5rem;
+$xl: 2rem;
+$l: 1.5rem;
+$m: 1.15rem;
+$s: 1rem;
+$xs: 0.9rem;
+$xxs: 0.8rem;
+
+// Viewport sizes
+$xs: 457px !default;
+$xs-up: 458px !default;
+$sm: 600px !default;
+$sm-up: 601px !default;
+$smd: 750px !default;
+$smd-up: 751px !default;
+$md: 992px !default;
+$md-up: 993px !default;
+$lg: 1200px !default;
+$lg-up: 1201px !default;
+
+// Media Queries
+$large-and-up: "only screen and (min-width : #{$md-up})" !default;
+$large-only: "only screen and (min-width : #{$md-up}) and (max-width : #{lg})" !default;
+$large-and-down: "only screen and (max-width : #{$lg})" !default;
+$medium-and-up: "only screen and (min-width : #{$sm-up})" !default;
+$medium-only: "only screen and (min-width : #{$sm-up}) and (max-width : #{$md})" !default;
+$medium-and-down: "only screen and (max-width : #{$md})" !default;
+// $smd-and-up: "only screen and (min-width : #{$sm-up})" !default;
+// $smd-only: "only screen and (min-width : #{$sm-up}) and (max-width : #{$smd})" !default;
+// $smd-and-down: "only screen and (max-width : #{$smd})" !default;
+$small-and-up: "only screen and (min-width : #{$xs-up})" !default;
+$small-only: "only screen and (min-width : #{$xs-up}) and (max-width : #{$sm})" !default;
+$small-and-down: "only screen and (max-width : #{$sm})" !default;
+$xsmall-only: "only screen and (max-width : #{$xs})" !default;

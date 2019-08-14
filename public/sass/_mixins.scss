@@ -1,0 +1,47 @@
+// *********************************
+// * Custom Mixins
+// *********************************
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform:     $property;
+  transform:         $property;
+}
+@mixin flex() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+@mixin transition($transition...){
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
+@mixin calc($property, $calculation) {
+  /* Firefox */
+  #{$property}: -moz-calc(#{$calculation});
+  /* WebKit */
+  #{$property}: -webkit-calc(#{$calculation});
+  /* Opera */
+  #{$property}: -o-calc(#{$calculation});
+  /* Standard */
+  #{$property}: calc(#{$calculation});
+}
+@mixin crossBrowserCSS($property, $css){
+  /* Firefox */
+  #{$property}: -moz-#{$css};
+  /* WebKit */
+  #{$property}: -webkit-#{$css};
+  // Opera
+  #{$property}: -o-#{$css};
+  /* Standard */
+  #{$property}: #{$css};
+}
+@mixin crossBrowser($property, $css){
+  -webkit-#{$property}: $css;
+  -moz-#{$property}: $css;
+  -o-#{$property}: $css;
+  #{$property}: $css;
+}

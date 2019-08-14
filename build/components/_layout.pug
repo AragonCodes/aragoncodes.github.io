@@ -1,0 +1,77 @@
+//- *********************************
+//- * RENDER HELPERS
+//- *********************************
+include _constants
+include _i18n
+include _mixins
+- var lang = es // Select Render Language
+
+//- **********************************
+//- * DOCTYPE HTML
+//- *********************************
+doctype html
+html
+	//- HEAD
+	head
+		//- METAS
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible' content='IE=edge')
+		meta(name='viewport' content='width=device-width, initial-scale=1')
+		meta(name='author' content='Kevin Aragon')
+		meta(name="apple-mobile-web-app-capable" content="yes")
+		meta(name='description', content=siteDescription)
+	
+		//- OPEN GRAPH DATA
+		meta(property='og:title', content=siteTitle)
+		meta(property='og:type', content='article')
+		meta(property='og:url', content=__SITE)
+		meta(property='og:image', content=__SITE+__IMG+'me.png')
+		meta(property='og:description', content=siteDescription)
+		meta(property='og:site_name', content=siteTitle) 
+
+		//- TITLE & FAVICON
+		link(rel="icon" type="image/png" href=__ICO+"ico.ico")
+		block title
+			title=siteTitle
+
+		//- Font Awesome Fast Load
+		script.
+				(function() { 
+					var css = document.createElement('link'); 
+					css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; 
+					css.rel = 'stylesheet'; css.type = 'text/css'; 
+					document.getElementsByTagName('head')[0].appendChild(css); 
+				})();
+		
+		//- CSS
+		block styles
+			link(href=__CSS+"reset.css")&attributes(linkCSS)
+			link(href="https://fonts.googleapis.com/css?family=Hind+Madurai:400,600&display=swap")&attributes(linkCSS)
+			link(href="https://fonts.googleapis.com/icon?family=Material+Icons")&attributes(linkCSS)
+			link(href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css")&attributes(linkCSS)
+			link(href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")&attributes(linkCSS)
+			link(href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css")&attributes(linkCSS)
+			link(href=__CSS+"main.css")&attributes(linkCSS)           
+
+		block additional_styles				
+
+	//- BODY
+	body
+		block content    
+		
+		//- BODY JS
+		block scripts
+			script(
+				src="https://code.jquery.com/jquery-3.4.1.min.js" 
+				integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  			crossorigin="anonymous")
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")&attributes(linkJS)
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js")&attributes(linkJS)
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js")&attributes(linkJS)
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js")&attributes(linkJS)
+			script(src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js")&attributes(linkJS)
+			script(src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js")&attributes(linkJS)
+			script(src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js")&attributes(linkJS)
+			script(src=__JS+"main.js")&attributes(linkJS)
+
+		block additional_scripts

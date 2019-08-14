@@ -1,0 +1,93 @@
+//- *********************************
+//- * MIXINS
+//- *********************************
+mixin AboutContent(content, index)
+  if ( index%2 == 0 )
+    .row.b-purple-7.padding-all-30.rounded-20(
+      data-aos="flip-right"
+      data-aos-duration="700"                
+      data-aos-anchor-placement="top-center"
+    )
+      .col.l3.m4.s12
+        h4.subtitle.t-white.padding-top-0.center.t-spaced                           
+          | #{content.title_1}
+          br
+          | #{content.title_2}
+        img.responsive-img.circle.padding-all-20(data-src=`${__ABOUT}me${index}.jpg`)
+      .col.c.l9.m8.s12
+        p.t-flow.no-padding.t-white
+          | #{content.body_1}
+          br
+          br
+          | #{content.body_2}
+  else
+    .row.padding-all-30(
+      data-aos="flip-left"          
+      data-aos-duration="700"
+      data-aos-anchor-placement="top-center"
+    )
+      .col.l3.m4.s12
+        h4.subtitle.padding-top-0.center.t-spaced                           
+          | #{content.title_1}
+          br
+          | #{content.title_2}
+        img.responsive-img.circle.padding-all-20(data-src=`${__ABOUT}me${index}.jpg`)
+      .col.c.l9.m8.s12
+        p.t-flow.no-padding
+          | #{content.body_1}
+          br
+          br
+          | #{content.body_2}
+
+  mixin ProjectDescription(project)
+    .col.l5.m10.offset-m1.s12
+
+      //- Title
+      h3.magic-card-title=project.title
+        if (project.subtitle != "")
+          | &nbsp
+          span.magic-card-subtitle=lang.projects.my_projects.coronavega.subtitle
+      .break-horizontal
+
+      //- Icons
+      p.t-white.margin-clear-10
+        if ( project.icons_string.includes("android"))
+          i.tech-font.tech-icon.fab.fa-android
+        if ( project.icons_string.includes("kotlin"))
+          img.tech-icon.tech-icon-img(data-src=`${__LOGO}kotlin.png`)
+        if ( project.icons_string.includes("react"))
+          i.tech-font.tech-icon.fab.fa-react
+        if ( project.icons_string.includes("js"))
+          i.tech-font.tech-icon.fab.fa-js-square
+        if ( project.icons_string.includes("sass"))
+          i.tech-font.tech-icon.fab.fa-sass(style="margin-left: -2px; ")
+        if ( project.icons_string.includes("pug"))
+          img.tech-icon.tech-icon-img(data-src=`${__LOGO}pug.png`)
+        if ( project.icons_string.includes("node"))
+          i.tech-font.tech-icon.fab.fa-node-js
+        if ( project.icons_string.includes("parse"))
+          img.tech-icon.tech-icon-img(data-src=`${__LOGO}parse.png`)
+        if ( project.icons_string.includes("firebase"))
+          img.tech-icon.tech-icon-img(data-src=`${__LOGO}firebase.png`)
+        if ( project.icons_string.includes("database"))  
+          i.tech-font.tech-icon.fas.fa-database
+        if ( project.icons_string.includes("mongo"))
+          img.tech-icon.tech-icon-img(data-src=`${__LOGO}mongodb.png` style="margin-left: -4px;")
+
+      //- Body
+      p.t-white.t-flow
+        | #{project.body_1}
+        if ( project.body_2 != "" )
+          br
+          br
+          | #{project.body_2}
+
+      //- Buttons
+      p.center.margin-top-10
+        if ( project.view_project != "" )
+          a.btn.btn-white-border.waves-effect.waves-light.margin-all-5(href=project.view_project)
+            | #{lang.projects.view_project}
+        if ( project.view_code != "" )
+          a.btn.btn-white-border.waves-effect.waves-light.margin-all-5(href=project.view_code)
+            | #{lang.projects.view_code}
+        

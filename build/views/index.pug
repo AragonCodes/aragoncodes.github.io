@@ -1,0 +1,227 @@
+extends ../components/_layout
+
+block content
+
+  //- Floating Btn
+  .fixed-action-btn
+    .btn-floating.btn-large.white.logo-bg
+    ul
+      li
+        a.btn-floating.b-purple-7.t-bold(href="/")
+          | EN
+      li
+        a.btn-floating.b-gray-1.t-bold(href="https://github.com/AragonCodes/aragoncodes.github.io")
+          i.material-icons
+            | code
+      li
+        a.btn-floating.b-pink-10.t-bold(href="/es")
+          | ES
+
+  //- Welcome
+  #welcome.section.section-welcome.center-content
+    .margin-bg.margin-bg-reversed
+    .bundle
+      .row
+        .col.s12
+          h1.title-welcome(
+            data-aos="fade-right"
+            data-aos-delay="0"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out-back"
+          )=lang.welcome.hi
+          h1.title-welcome(
+            data-aos="fade-right"
+            data-aos-delay="800"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out-back"
+          )=lang.welcome.i_am_kevin
+          #swiper-welcome.swiper-container(
+            data-aos="fade-right"
+            data-aos-delay="1600"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out-back"
+          )
+            .swiper-wrapper  
+              each msg, i in lang.welcome.my_passions
+                .swiper-slide.valign-wrapper
+                  if (i%2 == 0)
+                    h1.title-welcome.t-pink-10=msg
+                  else
+                    h1.title-welcome.t-purple-7=msg
+          h1.title-welcome(
+            data-aos="fade-right"
+            data-aos-delay="2400"
+            data-aos-duration="500"
+            data-aos-easing="ease-in-out-back"
+          )=lang.welcome.at_your_service
+      .row
+        .col.s12.center.external-links-container(
+            data-aos="zoom-in-up"
+            data-aos-delay="3000"
+            data-aos-duration="600"
+            data-aos-easing="ease-in-out"
+          )
+          h6.t-bold=lang.contact.with_me
+          p.margin-clear-10
+            each link in lang.contact.external_links
+              span
+                a(href=link.href)
+                  i.font-awesome(class=`${link.class}`)                      
+          .arrow-scroll-down
+
+  //- About
+  #about.section.flex-center-perfect
+    .row.c
+      .col.m10.offset-m1.s12
+        .row(
+          data-aos="zoom-in-up"
+          data-aos-duration="1000"
+          data-aos-anchor-placement="top-center"
+        )
+          .col.c.s12.center
+            h2.subtitle.subtitle-section 
+              img.logo-inline.hide-on-small-only(data-src=__LOGO+"logo_no_background.png")
+              | #{lang.about.welcome_to_aragoncodes}
+              img.logo-inline(data-src=__LOGO+"logo_no_background.png")
+
+          .col.c.l9.s12
+            p.section-intro.padding-top-20=lang.about.aragoncodes_intro
+          .col.c.l3.s12.margin-top-20.hide-on-med-and-down
+            a.btn.btn-pink.btn-large.waves-effect.waves-light.float-right.modal-trigger-hey-kevin=lang.about.spy_resume
+          .col.c.s12.margin-top-20.center.hide-on-large-only
+            a.btn.btn-pink.waves-effect.waves-light.modal-trigger-hey-kevin=lang.about.spy_resume                
+
+        //- Paragraphs
+        each about, index in lang.about.my_abouts
+          //- mixin AboutContent(content, index)
+          +AboutContent(about, index)
+
+  //- Projects
+  #projects.section
+    .row.projects-intro-container(
+      data-aos="zoom-in-up"
+      data-aos-duration="1000"
+    )
+      .col.s12.center
+        h4.subtitle.subtitle-section=lang.projects.section_title
+      .col.m10.offset-m1.s12.center
+        p.section-intro.padding-top-20
+          | #{lang.projects.section_subtitle_1}
+          br
+          | #{lang.projects.section_subtitle_2}
+
+    //- AgHelp
+    .b-grad-right-down-pink-purple.magic-card.magic-card-home.magic-card-home-1.center-content
+      .width-pct-100
+        .row.c
+          .col.l7.m8.offset-m2.s12.margin-bottom-10
+            .swiper-card.swiper-container
+                .swiper-wrapper                
+                  each i in [0,1,2,3]
+                    .swiper-slide
+                      img.responsive-img(data-src=`${__PROJECTS}aghelp_bundle${i}_optimized.png`)                   
+          +ProjectDescription(lang.projects.my_projects.aghelp)
+
+    //- CoronaVega
+    .b-grad-right-down-pink-purple.magic-card.magic-card-home.magic-card-home-2.center-content
+      .width-pct-100
+        .row.c
+          .col.l7.m8.offset-m2.s12.margin-bottom-10
+            .swiper-card.swiper-container
+                .swiper-wrapper                
+                  each i in [0,1]
+                    .swiper-slide
+                      img.responsive-img(data-src=`${__PROJECTS}coronavega_bundle${i}_optimized.png`)
+          +ProjectDescription(lang.projects.my_projects.coronavega)
+
+    //- Emaily
+    .b-grad-right-down-pink-purple.magic-card.magic-card-home.magic-card-home-3.center-content
+      .width-pct-100
+        .row.c
+          .col.l7.m8.offset-m2.s12.margin-bottom-10
+            img.responsive-img(data-src=`${__PROJECTS}emaily_bundle0_optimized.png`)
+          +ProjectDescription(lang.projects.my_projects.emaily)
+
+    //- ATuMesa-Client
+    .b-grad-right-down-pink-orange.magic-card.magic-card-home.magic-card-home-4.center-content
+      .width-pct-100
+        .row.c
+          .col.l7.m8.offset-m2.s12.margin-bottom-10
+            .swiper-card.swiper-container
+                .swiper-wrapper                
+                  each i in [0,1,2,3,4]
+                    .swiper-slide.center
+                      img.width-pct-45(data-src=`${__PROJECTS}atumesa_phone${i*2+1}_optimized.png`)
+                      img.width-pct-45(data-src=`${__PROJECTS}atumesa_phone${i*2+2}_optimized.png`)
+          +ProjectDescription(lang.projects.my_projects.atumesa)
+
+    //- ATuMesa-Restaurant
+    .b-grad-right-down-pink-orange.magic-card.magic-card-home.magic-card-home-5.center-content
+      .width-pct-100
+        .row.c
+          .col.l7.m8.offset-m2.s12.margin-bottom-10
+            .swiper-card.swiper-container
+                .swiper-wrapper                
+                  each i in [1,2,3]
+                    .swiper-slide
+                      img.responsive-img(data-src=`${__PROJECTS}atumesa_restaurant_tablet${i}_optimized.png`)
+          +ProjectDescription(lang.projects.my_projects.atumesa_restaurant)
+                
+    //- MyDrivers
+    .b-grad-right-down-pink-orange.magic-card.magic-card-home.magic-card-home-6.center-content
+      .width-pct-100
+        .row.c
+          .col.l7.m8.offset-m2.s12.margin-bottom-10
+            .swiper-card.swiper-container
+                .swiper-wrapper                
+                  each i in [0,1,2]
+                    .swiper-slide.center
+                      img.width-pct-45(data-src=`${__PROJECTS}mydrivers_phone${i*2+1}_optimized.png`)
+                      img.width-pct-45(data-src=`${__PROJECTS}mydrivers_phone${i*2+2}_optimized.png`)
+          +ProjectDescription(lang.projects.my_projects.mydrivers)
+    
+  //- Contact
+  #contact.section.section-home.section-contact.center-content.margin-top-vh-10
+    .content.row.c
+      .col.s12.center.hide-magic-cards-home
+        h3.title.t-xxl=lang.c2a.your_lucky_day
+        h3.title.t-xxl.margin-top-20=lang.c2a.party_emojis
+        p.title.t-l.margin-top-20.t-spaced
+          | #{lang.c2a.you_found_the_developer}
+          br
+          | #{lang.c2a.now_we_can_talk}
+        a.btn.waves-effect.waves-light.padding-sides-30.margin-top-20(href="mailto:kevin@aragoncodes.com")
+          | #{lang.c2a.btn.lets_talk}
+  
+    //- Footer
+    .margin-bg
+    #footer.position-absolute.z-bottom.z-left
+      p
+        a.link-white.margin-bottom-10(href="https://github.com/AragonCodes/aragoncodes.github.io")
+          | #{lang.footer.view_site_code}
+      p  
+        a.link-white.margin-bottom-10(href="https://github.com/AragonCodes")
+          | Coding is fun @AragonCodes
+      p
+        a.link-white(href="mailto:kevin@aragoncodes.com")
+          | Tel: +(52) 614 286 8780
+          br.hide-on-med-and-up
+          span.link-white.hide-on-small-only &nbsp&nbsp|&nbsp&nbsp
+          | kevin@aragoncodes.com
+  
+  //- Curriculum modal
+  .modal.modal-hey-kevin.padding-all-30.rounded-8.center.width-max-500
+    h3.title.t-xl=lang.c2a.your_lucky_day
+    h3.title.t-xl(style="margin: 20px 0 !important;")=lang.c2a.party_emojis
+    p.title.t-l.t-spaced(style="margin-bottom: 20px !important;")
+      | #{lang.c2a.looking_for_work}
+      br
+      | #{lang.c2a.you_found_the_perfect}
+      | &nbsp            
+      br.hide-on-small-only
+      | #{lang.c2a.dev_for_your_team}
+    .row.c
+      .col.m6.s12
+        a.btn.waves-effect.waves-light.margin-bottom-10(href="mailto:kevin@aragoncodes.com")=lang.c2a.btn.contact
+      .col.m6.s12
+        a.btn.waves-effect.waves-light(download href=`${__DOCS}Resume_KevinAragon.pdf`)=lang.c2a.btn.resume

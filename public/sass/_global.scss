@@ -1,0 +1,394 @@
+// *********************************
+// * Global
+// *********************************
+h1, h2, h3, h4, h5, h6, p,
+pre, a, img, small, strike,
+strong, sub, sup, b, u, i,
+label, span {
+  &:not(.material-icons, .btn) { font-family: "Hind Madurai", sans-serif; font-weight: $regular; color: nth($gray, 1) }
+  margin: 0;
+}
+.c {
+  &.row { margin-bottom: 0 !important;}
+  &.col, &.section { padding-left: 0 !important; padding-right: 0 !important; }
+}
+
+body {
+  background: white;
+  min-height: 100vh;
+}
+
+.font-awesome{
+  &:hover {
+    color: nth($purple, 7)
+  }
+}
+
+#scrollspy {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  min-width: 250px;
+  top: 50%;
+  @include transform(rotate(-90deg) translate(0px,-100px));
+  a { border: none}
+  .index { display: none; }
+  .active { .index { display: inline-block; } .bullet {background-color: nth($purple, 7) } }
+  .bullet {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid nth($purple, 7);
+  }
+  ul {
+    background-color: transparent;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    li { line-height: 10px; float: left; }
+  }
+}
+.scrollspyTag span {
+  line-height: 1;
+  padding: 0;
+  margin: 0 10px 0 0;  
+  font-size: 13px;
+  font-weight: normal;
+  &.index { color: nth($purple, 7) }
+}
+
+.section {
+  position: relative;
+  min-width: 100vw;
+  min-height: 100vh;
+
+  padding: 6vh 4vw;
+  @media #{$medium-and-down} { padding: 6vh 6vw; }
+  @media #{$small-and-down} { padding: 6vh 6vw; }
+  
+  &-contact {
+    background-position: 10% center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    padding-top: 10vh;
+    padding-bottom: 15vh;
+    // background-image: url($__IMG+"doodle_explain.svg");
+  }
+}
+
+.title-welcome {
+  font-weight: $bold;
+  
+  padding-top: 0.5rem;
+  @media #{$medium-and-down} { padding-top: 1rem }
+  @media #{$small-and-down} { padding-top: 0.5rem }
+
+  font-size: 4rem;
+  @media #{$medium-and-down} { font-size: 4rem; }
+  @media #{$small-and-down} { font-size: 2.5rem; }
+}
+
+.subtitle {
+  font-weight: $bold;
+  
+  padding-top: 0.5rem;
+  @media #{$medium-and-down} { padding-top: 1rem }
+  @media #{$small-and-down} { padding-top: 0.5rem }
+
+  font-size: 2.5rem;
+  @media #{$medium-and-down} { font-size: 2rem; }
+  @media #{$small-and-down} { font-size: 2rem; }
+
+  &-section {
+    font-size: 3.5rem;
+    @media #{$medium-and-down} { 
+      font-size: 2.5rem;
+      text-align: center;
+    }
+  }
+}
+
+.t-flow {
+  font-size: 1.35rem;
+  line-height: 1.15;
+  text-align: justify;
+  @media #{$medium-and-down} { font-size: 1.5rem; }
+  @media #{$small-and-down} { font-size: 1.25rem; }
+}
+
+.section-intro {
+  font-size: 1.7rem;
+  line-height: 1.15;
+  @media #{$medium-and-down} { font-size: 1.75rem; }
+  @media #{$small-and-down} { font-size: 1.5rem; }
+}
+
+#swiper-welcome {  
+  padding-left: 4rem;
+  @media #{$small-and-down} { padding-left: 2.2rem; }
+
+  height: 5.2rem;
+  @media #{$small-and-down} { height: 3.2rem; }
+}
+
+.external-links-container {
+  margin-top: 2rem;
+  
+  span{
+    padding: 1rem;
+  }
+}
+.sticky-logo {
+  height: 1.5rem;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+}
+
+.t-spaced {
+  line-height: 1.25;
+}
+
+.logo-bg{  
+  background-image: url($__LOGO+"logo_no_background.png");
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.logo-inline {
+  height: 4rem;
+  margin: 0 0.5rem -.8rem;
+  @media #{$medium-and-down} { 
+    height: 3rem;
+    margin: 0 0.5rem -.6rem;
+  }
+} 
+
+.margin-bg { 
+  
+  z-index: -1;
+  height: 240px;
+  @media #{$medium-and-down} { height: 180px; }
+  @media #{$small-and-down} { height: 145px; }
+
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  background-image: url($__BG+"header-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &-reversed {
+    height: 150px;
+    @media #{$medium-and-down} { height: 250px; }
+    @media #{$small-and-down} { height: 100px; }
+    
+    top: 0;
+    
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotateX(180deg);
+  }
+}
+
+.magic-card {
+  margin: 0 auto 30px;
+  border-radius: 20px;
+  padding: 40px;
+  min-height: 470px;
+  width: 70%;
+  @media #{$medium-and-down} { min-height: 570px; width: 90%; }
+  @media #{$small-and-down} { width: 100%; padding: 20px;  }
+
+  &-title {
+    line-height: 1;
+    color: white;
+    font-weight: $bold;
+
+    font-size: 2.5rem;
+    @media #{$medium-and-down} { font-size: 2rem; }
+    @media #{$small-and-down} { font-size: 2rem; }
+  }
+  &-subtitle {
+    line-height: 1;
+    color: white;    
+
+    font-size: 1.2rem;
+    @media #{$medium-and-down} { font-size: 1rem; }
+    @media #{$small-and-down} { font-size: 1rem; }
+  }
+
+}
+
+.tech-icon {
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
+  @media #{$medium-and-down} {     
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+  }
+  @media #{$small-and-down} {    
+    font-size: 20px;
+    height: 20px;
+    width: 20px;    
+  }
+
+  color: white;
+  margin: 0px 2px;
+  display: inline-block;
+  
+  &-img{   
+    margin-bottom: -3px;
+  }
+
+}
+
+.projects-intro-container {
+  margin-bottom: 12vh;
+}
+
+.break {
+
+  &-horizontal{
+    height: 1px;
+    width: 100%;
+    background: white;
+    // margin: 10px 5px; 
+  }
+}
+
+#footer {
+  padding: 15px;
+  @media #{$small-and-down} { padding: 10px; }
+}
+
+.link-white {
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: white;
+  &:hover { color: nth($yellow, 2); }
+  @media #{$small-and-down} { line-height: 1.5; }
+}
+
+//- ###########################################################################
+//- OLD
+//- ########################################################################### 
+.title {  
+  font-weight: $bold;
+}
+.center-content {
+  @include flex;
+  align-items: center;
+  justify-content: center;
+  &-inline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.btn{
+  font-size: 1.3rem;
+  border-radius: 8px;
+  background: nth($purple, 7);
+  text-transform: none;
+  &:hover { background: nth($purple, 2); }
+
+  &-pink{
+    background: nth($pink, 10);
+    &:hover { background: nth($pink, 1); }
+  }
+
+  &-white-border{
+    background: transparent;
+    border-radius: 0px;
+    border: 2px solid white;    
+  }
+}
+.link {
+  &-footer { font-weight: $bold; &:hover { color: nth($purple, 1) !important; }}
+  &-container { position: absolute; width: 100%; height: 100%; top: 0; left: 0 }
+  &-sidenav { font-weight: $bold !important; font-size: $l !important;}
+  &-nav { color: nth($gray, 1); &:hover{background-color: transparent; text-decoration: underline;} }
+}
+
+nav { position: fixed; z-index: 998; }
+.nav-wrapper, nav { background: transparent; box-shadow: none }
+.nav-logo-container{ padding: 15px 0 15px 30px;}
+.nav-logo { height: 34px }
+#mobile-menu {
+  right: 5vw;
+  top: 5vw;
+  position: fixed;
+  display: none;
+  z-index: 10;
+  @media #{$medium-and-down} { display: block; }
+}
+
+// *********************************
+// * Specialties
+// *********************************
+.b-grad {
+  &-down {
+    &-pink-orange{ background: linear-gradient(180deg, nth($pink, 3) 25%, nth($orange, 3) 75%); }
+    &-green-yellow{ background: linear-gradient(180deg, nth($green, 2) 25%, nth($yellow, 3) 75%); }
+    &-blue-pink{ background: linear-gradient(180deg, nth($blue, 2), nth($pink, 5) 70%); }
+  }
+  &-left-down {
+    &-pink-blue{ background: linear-gradient(45deg, nth($blue, 3) 25%, nth($pink, 4) 75%); }
+    &-pink-purple{ background: linear-gradient(45deg, nth($pink, 10), nth($purple, 8)); }
+  }
+  &-right {
+    &-purple-pink{
+      background: linear-gradient(102deg, nth($purple, 4), nth($pink, 6));
+      &:hover { background: linear-gradient(102deg, nth($purple, 5), nth($pink, 7)); }
+    }
+    &-pink-orange{
+      background: linear-gradient(102deg, nth($pink, 1), nth($orange, 1));
+      &:hover { background: linear-gradient(102deg, nth($orange, 2), nth($pink, 2)); }
+    }
+    &-down{
+      &-pink-orange{ background: linear-gradient(-45deg, nth($pink, 8), nth($pink, 9), nth($orange, 4)); }
+      &-orange-pink{ background: linear-gradient(-45deg, nth($orange, 4), nth($pink, 9), nth($pink, 8)); }
+      &-pink-purple{ background: linear-gradient(-45deg, nth($pink, 10), nth($purple, 8)); }
+    }
+  }
+  &-circle {
+    &-blue-pink{ background-image: radial-gradient(nth($blue, 1) 30%, nth($pink, 4) 75%); }
+  }
+}
+@keyframes arrow-movement {
+  0%, 100% {opacity: 0 }
+  50% { opacity: 1; top: 150%; }
+  90% { opacity: 0; top: 200%; }
+}
+.scroll-down-container { position: absolute; bottom: 15vh; left: 50% }
+.arrow-scroll-down {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform-origin: 50% 50%;
+  transform: translate3d(-50%, -50%, 0);
+  animation: arrow-movement 1.5s ease-in infinite;
+  &:before, &:after {
+    background: black;
+    content: '';
+    display: block;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+  }
+  &:before { transform: rotate(45deg) translateX(-9%); transform-origin: top left; }
+  &:after { transform: rotate(-45deg) translateX(9%); transform-origin: top right; }
+} 
