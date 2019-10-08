@@ -84,12 +84,12 @@ block content
               | #{lang.about.welcome_to_aragoncodes}
               img.logo-inline(data-src=__LOGO+"logo_no_background.png")
 
-          .col.c.l9.s12
-            p.section-intro.padding-top-20=lang.about.aragoncodes_intro
-          .col.c.l3.s12.margin-top-20.hide-on-med-and-down
-            a.btn.btn-pink.btn-large.waves-effect.waves-light.float-right.modal-trigger-hey-kevin=lang.about.spy_resume
-          .col.c.s12.margin-top-20.center.hide-on-large-only
-            a.btn.btn-pink.waves-effect.waves-light.modal-trigger-hey-kevin=lang.about.spy_resume                
+          .col.m10.offset-m1.s12.margin-bottom-20
+            p.center.section-intro.padding-top-20=lang.about.aragoncodes_intro
+          //- .col.c.l3.s12.margin-top-20.hide-on-med-and-down
+          //-   a.btn.btn-pink.btn-large.waves-effect.waves-light.float-right.modal-trigger-hey-kevin=lang.about.spy_resume
+          //- .col.c.s12.margin-top-20.center.hide-on-large-only
+          //-   a.btn.btn-pink.waves-effect.waves-light.modal-trigger-hey-kevin=lang.about.spy_resume                
 
         //- Paragraphs
         each about, index in lang.about.my_abouts
@@ -119,7 +119,7 @@ block content
                 .swiper-wrapper                
                   each i in [0,1,2,3]
                     .swiper-slide
-                      img.responsive-img(data-src=`${__PROJECTS}aghelp_bundle${i}_optimized.png`)                   
+                      img.responsive-img(data-src=`${__PROJECTS}aghelp_bundle${i}_optimized.png`)
           +ProjectDescription(lang.projects.my_projects.aghelp)
 
     //- CoronaVega

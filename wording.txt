@@ -1,0 +1,7 @@
+I'm a Software Developer with experience in full stack development for web and android platforms. I enjoy engaging in creative challenges and collaborating on high-quality projects.
+
+On the other hand, I sing for about 70% of my day. In fact, I used to perform on stage while I was in university. I also love to swim, and sometimes, I like to hop on a plane and go discover a part of the world I haven't been to before.
+I started coding back in high school, where I developed my first - app - in a program called 'Alice - Tell Stories', creating 3D animations of funny characters. It wasn't the greatest thing, but it was the spark that ignited my passion. Since then, I’ve spent countless days online, but it wasn't until recent years that I’ve experimented with the technologies that turned me into the developer I am today.
+
+So in the last two years I've learned a lot of cool stuff related to front-end, back-end, and mobile development. I used that knowledge to build many exciting projects for diversified areas like agricultural employment,social network, food delivery, and ultimately, this website. That also means that I've used several technologies, and to this day, I have practical knowledge on Android, Kotlin, Git, NodeJS, ExpressJS, MongoDB, Firebase, ParseDB, jQuery, React, Materialize, Pug.js, Sass, responsive design, RESTful architecture, API's and more.
+I received a B.S. in Mechatronics Engineering, graduating summa cum laude from Monterrey Institute of Technology and Higher Education (ITESM).
