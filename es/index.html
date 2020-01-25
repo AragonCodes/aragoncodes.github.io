@@ -16,15 +16,26 @@
     <meta property="og:site_name" content="AragonCodes">
     <link rel="icon" type="image/png" href="/public/img/ico/ico.ico">
     <title>AragonCodes</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156905453-1"></script>
     <script>
-      (function() { 
-      	var css = document.createElement('link'); 
-      	css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; 
-      	css.rel = 'stylesheet'; css.type = 'text/css'; 
-      	document.getElementsByTagName('head')[0].appendChild(css); 
-      })();
-      
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+      	dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-156905453-1');
     </script>
+    <script>
+      (function() {
+      	const css = document.createElement('link');
+      	css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css';
+      	css.rel = 'stylesheet';
+	css.type = 'text/css';
+      	document.getElementsByTagName('head')[0].appendChild(css);
+      })();
+          </script>
     <link href="/public/css/reset.css" type="text/css" rel="stylesheet" media="screen, projection">
     <link href="https://fonts.googleapis.com/css?family=Hind+Madurai:400,600&amp;display=swap" type="text/css" rel="stylesheet" media="screen, projection">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css" rel="stylesheet" media="screen, projection">
