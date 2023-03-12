@@ -1,326 +1,449 @@
-
-<!-- Strings--><!DOCTYPE html>
+<!-- Strings-->
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Kevin Aragon">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="description" content="Hi, my name is Kevin Aragon. I am a Full Stack / Mobile Developer from Mexico and this is my personal website with info about me, my interests, projects and skills.">
-    <meta property="og:title" content="AragonCodes">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://aragoncodes.com">
-    <meta property="og:image" content="https://aragoncodes.com/public/img/me.png">
-    <meta property="og:description" content="Hi, my name is Kevin Aragon. I am a Full Stack / Mobile Developer from Mexico and this is my personal website with info about me, my interests, projects and skills.">
-    <meta property="og:site_name" content="AragonCodes">
-    <link rel="icon" type="image/png" href="/public/img/ico/ico.ico">
-    <title>AragonCodes</title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156905453-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-      	dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
 
-      gtag('config', 'UA-156905453-1');
-    </script>
-    <script>
-      (function() {
-      	const css = document.createElement('link');
-      	css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css';
-      	css.rel = 'stylesheet';
-	css.type = 'text/css';
-      	document.getElementsByTagName('head')[0].appendChild(css);
-      })();
-          </script>
-    <link href="/public/css/reset.css" type="text/css" rel="stylesheet" media="screen, projection">
-    <link href="https://fonts.googleapis.com/css?family=Hind+Madurai:400,600&amp;display=swap" type="text/css" rel="stylesheet" media="screen, projection">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css" rel="stylesheet" media="screen, projection">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" type="text/css" rel="stylesheet" media="screen, projection">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen, projection">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css" type="text/css" rel="stylesheet" media="screen, projection">
-    <link href="/public/css/main.css" type="text/css" rel="stylesheet" media="screen, projection">
-  </head>
-  <body>
-    <div class="fixed-action-btn">
-      <div class="btn-floating btn-large white logo-bg"></div>
-      <ul>
-        <li><a class="btn-floating b-purple-7 t-bold" href="/">EN</a></li>
-        <li><a class="btn-floating b-gray-1 t-bold" href="https://github.com/AragonCodes/aragoncodes.github.io"><i class="material-icons">code</i></a></li>
-        <li><a class="btn-floating b-pink-10 t-bold" href="/es">ES</a></li>
-      </ul>
-    </div>
-    <div class="section section-welcome center-content" id="welcome">
-      <div class="margin-bg margin-bg-reversed"></div>
-      <div class="bundle">
-        <div class="row">
-          <div class="col s12">
-            <h1 class="title-welcome" data-aos="fade-right" data-aos-delay="0" data-aos-duration="500" data-aos-easing="ease-in-out-back">¡Hola! 👋</h1>
-            <h1 class="title-welcome" data-aos="fade-right" data-aos-delay="800" data-aos-duration="500" data-aos-easing="ease-in-out-back">Soy Kevin Aragón</h1>
-            <div class="swiper-container" id="swiper-welcome" data-aos="fade-right" data-aos-delay="1600" data-aos-duration="500" data-aos-easing="ease-in-out-back">
-              <div class="swiper-wrapper"> 
-                <div class="swiper-slide valign-wrapper">
-                  <h1 class="title-welcome t-pink-10">Cantante 🎙</h1>
-                </div>
-                <div class="swiper-slide valign-wrapper">
-                  <h1 class="title-welcome t-purple-7">Desarrollador 💻</h1>
-                </div>
-                <div class="swiper-slide valign-wrapper">
-                  <h1 class="title-welcome t-pink-10">Ingeniero 🔩</h1>
-                </div>
-                <div class="swiper-slide valign-wrapper">
-                  <h1 class="title-welcome t-purple-7">Viajero 🏖</h1>
-                </div>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Kevin Aragon">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="description"
+    content="Hi, my name is Kevin Aragon. I am a Full Stack / Mobile Developer from Mexico and this is my personal website with info about me, my interests, projects and skills.">
+  <meta property="og:title" content="AragonCodes">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://aragoncodes.com">
+  <meta property="og:image" content="https://aragoncodes.com/public/img/me.png">
+  <meta property="og:description"
+    content="Hi, my name is Kevin Aragon. I am a Full Stack / Mobile Developer from Mexico and this is my personal website with info about me, my interests, projects and skills.">
+  <meta property="og:site_name" content="AragonCodes">
+  <link rel="icon" type="image/png" href="/public/img/ico/ico.ico">
+  <title>AragonCodes</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156905453-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-156905453-1');
+  </script>
+  <script>
+    (function () {
+      const css = document.createElement('link');
+      css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css';
+      css.rel = 'stylesheet';
+      css.type = 'text/css';
+      document.getElementsByTagName('head')[0].appendChild(css);
+    })();
+  </script>
+  <link href="/public/css/reset.css" type="text/css" rel="stylesheet" media="screen, projection">
+  <link href="https://fonts.googleapis.com/css?family=Hind+Madurai:400,600&amp;display=swap" type="text/css"
+    rel="stylesheet" media="screen, projection">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" type="text/css" rel="stylesheet"
+    media="screen, projection">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" type="text/css" rel="stylesheet"
+    media="screen, projection">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css"
+    rel="stylesheet" media="screen, projection">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css" type="text/css" rel="stylesheet"
+    media="screen, projection">
+  <link href="/public/css/main.css" type="text/css" rel="stylesheet" media="screen, projection">
+</head>
+
+<body>
+  <div class="fixed-action-btn">
+    <div class="btn-floating btn-large white logo-bg"></div>
+    <ul>
+      <li><a class="btn-floating b-purple-7 t-bold" href="/">EN</a></li>
+      <li><a class="btn-floating b-gray-1 t-bold" href="https://github.com/AragonCodes/aragoncodes.github.io"><i
+            class="material-icons">code</i></a></li>
+      <li><a class="btn-floating b-pink-10 t-bold" href="/es">ES</a></li>
+    </ul>
+  </div>
+  <div class="section section-welcome center-content" id="welcome">
+    <div class="margin-bg margin-bg-reversed"></div>
+    <div class="bundle">
+      <div class="row">
+        <div class="col s12">
+          <h1 class="title-welcome" data-aos="fade-right" data-aos-delay="0" data-aos-duration="500"
+            data-aos-easing="ease-in-out-back">¡Hola! 👋</h1>
+          <h1 class="title-welcome" data-aos="fade-right" data-aos-delay="800" data-aos-duration="500"
+            data-aos-easing="ease-in-out-back">Soy Kevin Aragón</h1>
+          <div class="swiper-container" id="swiper-welcome" data-aos="fade-right" data-aos-delay="1600"
+            data-aos-duration="500" data-aos-easing="ease-in-out-back">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide valign-wrapper">
+                <h1 class="title-welcome t-pink-10">Cantante 🎙</h1>
+              </div>
+              <div class="swiper-slide valign-wrapper">
+                <h1 class="title-welcome t-purple-7">Desarrollador 💻</h1>
+              </div>
+              <div class="swiper-slide valign-wrapper">
+                <h1 class="title-welcome t-pink-10">Ingeniero 🔩</h1>
+              </div>
+              <div class="swiper-slide valign-wrapper">
+                <h1 class="title-welcome t-purple-7">Viajero 🏖</h1>
               </div>
             </div>
-            <h1 class="title-welcome" data-aos="fade-right" data-aos-delay="2400" data-aos-duration="500" data-aos-easing="ease-in-out-back">…a tu servicio.</h1>
+          </div>
+          <h1 class="title-welcome" data-aos="fade-right" data-aos-delay="2400" data-aos-duration="500"
+            data-aos-easing="ease-in-out-back">…a tu servicio.</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 center external-links-container" data-aos="zoom-in-up" data-aos-delay="3000"
+          data-aos-duration="600" data-aos-easing="ease-in-out">
+          <h6 class="t-bold">Contáctame en</h6>
+          <p class="margin-clear-10"><span><a href="https://github.com/aragoncodes"><i
+                  class="font-awesome fab fa-github fa-2x"> </i></a></span><span><a
+                href="https://www.linkedin.com/in/aragonkevin/"><i class="font-awesome fab fa-linkedin-in fa-2x">
+                </i></a></span><span><a href="mailto:kevin@aragoncodes.com"><i
+                  class="font-awesome fas fa-envelope fa-2x"> </i></a></span>
+          </p>
+          <div class="arrow-scroll-down"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section flex-center-perfect" id="about">
+    <div class="row c">
+      <div class="col m10 offset-m1 s12">
+        <div class="row" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-anchor-placement="top-center">
+          <div class="col c s12 center">
+            <h2 class="subtitle subtitle-section"> <img class="logo-inline hide-on-small-only"
+                data-src="/public/img/logo/logo_no_background.png">¡Bienvenido a AragonCodes!<img class="logo-inline"
+                data-src="/public/img/logo/logo_no_background.png"></h2>
+          </div>
+          <div class="col m10 offset-m1 s12 margin-bottom-20">
+            <p class="center section-intro padding-top-20">Gracias por visitar mi sitio. Siéntete libre de navegarlo y
+              conocer más de mis proyectos, intereses, habilidades; o simplemente di hola! 👋</p>
           </div>
         </div>
-        <div class="row">
-          <div class="col s12 center external-links-container" data-aos="zoom-in-up" data-aos-delay="3000" data-aos-duration="600" data-aos-easing="ease-in-out">
-            <h6 class="t-bold">Contáctame en</h6>
-            <p class="margin-clear-10"><span><a href="https://github.com/aragoncodes"><i class="font-awesome fab fa-github fa-2x">                     </i></a></span><span><a href="https://www.linkedin.com/in/aragonkevin/"><i class="font-awesome fab fa-linkedin-in fa-2x">                     </i></a></span><span><a href="mailto:kevin@aragoncodes.com"><i class="font-awesome fas fa-envelope fa-2x">                     </i></a></span>
+        <div class="row b-purple-7 padding-all-30 rounded-20" data-aos="flip-right" data-aos-duration="700"
+          data-aos-anchor-placement="top-center">
+          <div class="col l3 m4 s12">
+            <h4 class="subtitle t-white padding-top-0 center t-spaced"> Quien es<br />Kevin? 🤷🏻‍♂️</h4><img
+              class="responsive-img circle padding-all-20" data-src="/public/img/about/me0.jpg" />
+          </div>
+          <div class="col c l9 m8 s12">
+            <p class="t-flow no-padding t-white">Soy un Software Developer con experienca en desarrollo full stack para
+              plataformas Web y Android. Siempre estoy en búsqueda de retos creativos y colaborar en proyectos de gran
+              impacto, incluyendo diferentes áreas como empleo agrícola, redes sociales, entrega de comida, y por
+              último, este sitio.<br /><br />En mi lado divertido, canto alrededor de 70% de mi día, y solía hacerlo en
+              el escenario en la universidad. Me encanta nadar, y algunas veces, me gusta viajar y descubrir lugares del
+              mundo.</p>
+          </div>
+        </div>
+        <div class="row padding-all-30" data-aos="flip-left" data-aos-duration="700"
+          data-aos-anchor-placement="top-center">
+          <div class="col l3 m4 s12">
+            <h4 class="subtitle padding-top-0 center t-spaced"> Software<br />Developer 💻</h4><img
+              class="responsive-img circle padding-all-20" data-src="/public/img/about/me1.jpg" />
+          </div>
+          <div class="col c l9 m8 s12">
+            <p class="t-flow no-padding">Comencé a programar en preparatoria, fue entonces que hice mi primera - app -
+              en un programa llamado 'Alice - Tell Stories', creando animaciones 3D de personajes.<br /><br />Desde
+              entonces he experimentado con tecnologías y en los últimos dos años he aprendido mucho acerca de
+              front-end, back-end, y desarrollo móvil, como Java, Kotlin, Git, NodeJS, ExpressJS, MongoDB, Firebase,
+              ParseDB, jQuery, React, Materialize, Pug.js, Sass, responsive design, RESTful architecture, API's y más.
             </p>
-            <div class="arrow-scroll-down"></div>
+          </div>
+        </div>
+        <div class="row b-purple-7 padding-all-30 rounded-20" data-aos="flip-right" data-aos-duration="700"
+          data-aos-anchor-placement="top-center">
+          <div class="col l3 m4 s12">
+            <h4 class="subtitle t-white padding-top-0 center t-spaced"> Orgulloso<br />Ingeniero ⚡</h4><img
+              class="responsive-img circle padding-all-20" data-src="/public/img/about/me2.jpg" />
+          </div>
+          <div class="col c l9 m8 s12">
+            <p class="t-flow no-padding t-white">Graduado summa cum laude de Ing. en Mecatrónica, del Instituto
+              Tecnológico y de Estudios Superiores de Monterrey (ITESM).<br /><br />Durante mis estudios, trabajé en la
+              industria de tecnología por varios años, donde tuve la oportunidad de diseñar sistemas automatizados,
+              programar PLC's, colaborar en tecnología biomédica, y crear plataformas de software para compañías como
+              Honeywell y AutoZone.</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="section flex-center-perfect" id="about">
-      <div class="row c">
-        <div class="col m10 offset-m1 s12">
-          <div class="row" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-anchor-placement="top-center">
-            <div class="col c s12 center">
-              <h2 class="subtitle subtitle-section"> <img class="logo-inline hide-on-small-only" data-src="/public/img/logo/logo_no_background.png">¡Bienvenido a AragonCodes!<img class="logo-inline" data-src="/public/img/logo/logo_no_background.png"></h2>
-            </div>
-            <div class="col m10 offset-m1 s12 margin-bottom-20">
-              <p class="center section-intro padding-top-20">Gracias por visitar mi sitio. Siéntete libre de navegarlo y conocer más de mis proyectos, intereses, habilidades; o simplemente di hola! 👋</p>
+  </div>
+  <div class="section" id="projects">
+    <div class="row projects-intro-container" data-aos="zoom-in-up" data-aos-duration="1000">
+      <div class="col s12 center">
+        <h4 class="subtitle subtitle-section">Mi Pasión ❤️</h4>
+      </div>
+      <div class="col m10 offset-m1 s12 center">
+        <p class="section-intro padding-top-20">Esta gran aventura ha sido muy emocionante<br>Pero como cualquier
+          otra... ha tenido sus grandes retos</p>
+      </div>
+    </div>
+    <div class="b-grad-right-down-pink-purple magic-card magic-card-home magic-card-home-1 center-content">
+      <div class="width-pct-100">
+        <div class="row c">
+          <div class="col l7 m8 offset-m2 s12 margin-bottom-10">
+            <div class="swiper-card swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img class="responsive-img"
+                    data-src="/public/img/projects/aghelp_bundle0_optimized.png"></div>
+                <div class="swiper-slide"><img class="responsive-img"
+                    data-src="/public/img/projects/aghelp_bundle1_optimized.png"></div>
+                <div class="swiper-slide"><img class="responsive-img"
+                    data-src="/public/img/projects/aghelp_bundle2_optimized.png"></div>
+                <div class="swiper-slide"><img class="responsive-img"
+                    data-src="/public/img/projects/aghelp_bundle3_optimized.png"></div>
+              </div>
             </div>
           </div>
-          <div class="row b-purple-7 padding-all-30 rounded-20" data-aos="flip-right" data-aos-duration="700" data-aos-anchor-placement="top-center">
-            <div class="col l3 m4 s12">
-              <h4 class="subtitle t-white padding-top-0 center t-spaced">                          Quien es<br/>Kevin? 🤷🏻‍♂️</h4><img class="responsive-img circle padding-all-20" data-src="/public/img/about/me0.jpg"/>
-            </div>
-            <div class="col c l9 m8 s12">
-              <p class="t-flow no-padding t-white">Soy un Software Developer con experienca en desarrollo full stack para plataformas Web y Android. Siempre estoy en búsqueda de retos creativos y colaborar en proyectos de gran impacto, incluyendo diferentes áreas como empleo agrícola, redes sociales, entrega de comida, y por último, este sitio.<br/><br/>En mi lado divertido, canto alrededor de 70% de mi día, y solía hacerlo en el escenario en la universidad. Me encanta nadar, y algunas veces, me gusta viajar y descubrir lugares del mundo.</p>
-            </div>
-          </div>
-          <div class="row padding-all-30" data-aos="flip-left" data-aos-duration="700" data-aos-anchor-placement="top-center">
-            <div class="col l3 m4 s12">
-              <h4 class="subtitle padding-top-0 center t-spaced">                          Software<br/>Developer 💻</h4><img class="responsive-img circle padding-all-20" data-src="/public/img/about/me1.jpg"/>
-            </div>
-            <div class="col c l9 m8 s12">
-              <p class="t-flow no-padding">Comencé a programar en preparatoria, fue entonces que hice mi primera - app - en un programa llamado 'Alice - Tell Stories', creando animaciones 3D de personajes.<br/><br/>Desde entonces he experimentado con tecnologías y en los últimos dos años he aprendido mucho acerca de front-end, back-end, y desarrollo móvil, como Java, Kotlin, Git, NodeJS, ExpressJS, MongoDB, Firebase, ParseDB, jQuery, React, Materialize, Pug.js, Sass, responsive design, RESTful architecture, API's y más.</p>
-            </div>
-          </div>
-          <div class="row b-purple-7 padding-all-30 rounded-20" data-aos="flip-right" data-aos-duration="700" data-aos-anchor-placement="top-center">
-            <div class="col l3 m4 s12">
-              <h4 class="subtitle t-white padding-top-0 center t-spaced">                          Orgulloso<br/>Ingeniero ⚡</h4><img class="responsive-img circle padding-all-20" data-src="/public/img/about/me2.jpg"/>
-            </div>
-            <div class="col c l9 m8 s12">
-              <p class="t-flow no-padding t-white">Graduado summa cum laude de Ing. en Mecatrónica, del Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM).<br/><br/>Durante mis estudios, trabajé en la industria de tecnología por varios años, donde tuve la oportunidad de diseñar sistemas automatizados, programar PLC's, colaborar en tecnología biomédica, y crear plataformas de software para compañías como Honeywell y AutoZone.</p>
-            </div>
+          <div class="col l5 m10 offset-m1 s12">
+            <h3 class="magic-card-title">AgHelp
+            </h3>
+            <div class="break-horizontal"></div>
+            <p class="t-white margin-clear-10"><i class="tech-font tech-icon fab fa-js-square"></i><i
+                class="tech-font tech-icon fab fa-sass" style="margin-left: -2px; "></i><img
+                class="tech-icon tech-icon-img" data-src="/public/img/logo/pug.png" /><i
+                class="tech-font tech-icon fab fa-node-js"></i><img class="tech-icon tech-icon-img"
+                data-src="/public/img/logo/parse.png" /><img class="tech-icon tech-icon-img"
+                data-src="/public/img/logo/firebase.png" />
+            </p>
+            <p class="t-white t-flow">Plataforma web responsiva que conecta empleadores, trabajadores y agencias de
+              servicio a lo largo de EUA, a través de ofertas de empleo, pagos en línea, chat en tiempo real y
+              publicaciones
+            </p>
+            <p class="center margin-top-10"><a class="btn btn-white-border waves-effect waves-light margin-all-5"
+                href="https://aghelpusa.com">Ver proyecto</a>
+            </p>
           </div>
         </div>
       </div>
     </div>
-    <div class="section" id="projects">
-      <div class="row projects-intro-container" data-aos="zoom-in-up" data-aos-duration="1000">
-        <div class="col s12 center">
-          <h4 class="subtitle subtitle-section">Mi Pasión ❤️</h4>
-        </div>
-        <div class="col m10 offset-m1 s12 center">
-          <p class="section-intro padding-top-20">Esta gran aventura ha sido muy emocionante<br>Pero como cualquier otra... ha tenido sus grandes retos</p>
-        </div>
-      </div>
-      <div class="b-grad-right-down-pink-purple magic-card magic-card-home magic-card-home-1 center-content">
-        <div class="width-pct-100">
-          <div class="row c">
-            <div class="col l7 m8 offset-m2 s12 margin-bottom-10">
-              <div class="swiper-card swiper-container">
-                <div class="swiper-wrapper">               
-                  <div class="swiper-slide"><img class="responsive-img" data-src="/public/img/projects/aghelp_bundle0_optimized.png"></div>
-                  <div class="swiper-slide"><img class="responsive-img" data-src="/public/img/projects/aghelp_bundle1_optimized.png"></div>
-                  <div class="swiper-slide"><img class="responsive-img" data-src="/public/img/projects/aghelp_bundle2_optimized.png"></div>
-                  <div class="swiper-slide"><img class="responsive-img" data-src="/public/img/projects/aghelp_bundle3_optimized.png"></div>
-                </div>
+    <div class="b-grad-right-down-pink-purple magic-card magic-card-home magic-card-home-2 center-content">
+      <div class="width-pct-100">
+        <div class="row c">
+          <div class="col l7 m8 offset-m2 s12 margin-bottom-10">
+            <div class="swiper-card swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img class="responsive-img"
+                    data-src="/public/img/projects/coronavega_bundle0_optimized.png"></div>
+                <div class="swiper-slide"><img class="responsive-img"
+                    data-src="/public/img/projects/coronavega_bundle1_optimized.png"></div>
               </div>
             </div>
-            <div class="col l5 m10 offset-m1 s12">
-              <h3 class="magic-card-title">AgHelp
-              </h3>
-              <div class="break-horizontal"></div>
-              <p class="t-white margin-clear-10"><i class="tech-font tech-icon fab fa-js-square"></i><i class="tech-font tech-icon fab fa-sass" style="margin-left: -2px; "></i><img class="tech-icon tech-icon-img" data-src="/public/img/logo/pug.png"/><i class="tech-font tech-icon fab fa-node-js"></i><img class="tech-icon tech-icon-img" data-src="/public/img/logo/parse.png"/><img class="tech-icon tech-icon-img" data-src="/public/img/logo/firebase.png"/>
-              </p>
-              <p class="t-white t-flow">Plataforma web responsiva que conecta empleadores, trabajadores y agencias de servicio a lo largo de EUA, a través de ofertas de empleo, pagos en línea, chat en tiempo real y publicaciones
-              </p>
-              <p class="center margin-top-10"><a class="btn btn-white-border waves-effect waves-light margin-all-5" href="https://aghelpusa.com">Ver proyecto</a>
-              </p>
-            </div>
           </div>
-        </div>
-      </div>
-      <div class="b-grad-right-down-pink-purple magic-card magic-card-home magic-card-home-2 center-content">
-        <div class="width-pct-100">
-          <div class="row c">
-            <div class="col l7 m8 offset-m2 s12 margin-bottom-10">
-              <div class="swiper-card swiper-container">
-                <div class="swiper-wrapper">               
-                  <div class="swiper-slide"><img class="responsive-img" data-src="/public/img/projects/coronavega_bundle0_optimized.png"></div>
-                  <div class="swiper-slide"><img class="responsive-img" data-src="/public/img/projects/coronavega_bundle1_optimized.png"></div>
-                </div>
-              </div>
-            </div>
-            <div class="col l5 m10 offset-m1 s12">
-              <h3 class="magic-card-title">CoronaVega&nbsp<span class="magic-card-subtitle">Abogados</span>
-              </h3>
-              <div class="break-horizontal"></div>
-              <p class="t-white margin-clear-10"><i class="tech-font tech-icon fab fa-js-square"></i><i class="tech-font tech-icon fab fa-sass" style="margin-left: -2px; "></i><img class="tech-icon tech-icon-img" data-src="/public/img/logo/pug.png"/><i class="tech-font tech-icon fab fa-node-js"></i><img class="tech-icon tech-icon-img" data-src="/public/img/logo/parse.png"/>
-              </p>
-              <p class="t-white t-flow">Plataforma web responsiva para manejo de marcas registradas, monitoreo y reporteo<br/><br/>Crea y manda reportes automáticamente para 1,000+ clientes
-              </p>
-              <p class="center margin-top-10"><a class="btn btn-white-border waves-effect waves-light margin-all-5" href="https://coronavega.online">Ver proyecto</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="b-grad-right-down-pink-purple magic-card magic-card-home magic-card-home-3 center-content">
-        <div class="width-pct-100">
-          <div class="row c">
-            <div class="col l7 m8 offset-m2 s12 margin-bottom-10"><img class="responsive-img" data-src="/public/img/projects/emaily_bundle0_optimized.png"></div>
-            <div class="col l5 m10 offset-m1 s12">
-              <h3 class="magic-card-title">Emaily
-              </h3>
-              <div class="break-horizontal"></div>
-              <p class="t-white margin-clear-10"><i class="tech-font tech-icon fab fa-react"></i><i class="tech-font tech-icon fab fa-js-square"></i><i class="tech-font tech-icon fab fa-node-js"></i><i class="tech-font tech-icon fas fa-database"></i><img class="tech-icon tech-icon-img" data-src="/public/img/logo/mongodb.png" style="margin-left: -4px;"/>
-              </p>
-              <p class="t-white t-flow">Plataforma web reactiva (React) para mandar emails de retroalimentación de manera masiva, integrando pagos online, Google Auth y Webhooks<br/><br/>Creada con enfoque en funcionalidad, sobre diseño
-              </p>
-              <p class="center margin-top-10"><a class="btn btn-white-border waves-effect waves-light margin-all-5" href="https://damp-depths-80850.herokuapp.com">Ver proyecto</a><a class="btn btn-white-border waves-effect waves-light margin-all-5" href="https://github.com/AragonCodes/emaily">Ver código</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="b-grad-right-down-pink-orange magic-card magic-card-home magic-card-home-4 center-content">
-        <div class="width-pct-100">
-          <div class="row c">
-            <div class="col l7 m8 offset-m2 s12 margin-bottom-10">
-              <div class="swiper-card swiper-container">
-                <div class="swiper-wrapper">               
-                  <div class="swiper-slide center"><img class="width-pct-45" data-src="/public/img/projects/atumesa_phone1_optimized.png"><img class="width-pct-45" data-src="/public/img/projects/atumesa_phone2_optimized.png"></div>
-                  <div class="swiper-slide center"><img class="width-pct-45" data-src="/public/img/projects/atumesa_phone3_optimized.png"><img class="width-pct-45" data-src="/public/img/projects/atumesa_phone4_optimized.png"></div>
-                  <div class="swiper-slide center"><img class="width-pct-45" data-src="/public/img/projects/atumesa_phone5_optimized.png"><img class="width-pct-45" data-src="/public/img/projects/atumesa_phone6_optimized.png"></div>
-                  <div class="swiper-slide center"><img class="width-pct-45" data-src="/public/img/projects/atumesa_phone7_optimized.png"><img class="width-pct-45" data-src="/public/img/projects/atumesa_phone8_optimized.png"></div>
-                  <div class="swiper-slide center"><img class="width-pct-45" data-src="/public/img/projects/atumesa_phone9_optimized.png"><img class="width-pct-45" data-src="/public/img/projects/atumesa_phone10_optimized.png"></div>
-                </div>
-              </div>
-            </div>
-            <div class="col l5 m10 offset-m1 s12">
-              <h3 class="magic-card-title">ATuMesa
-              </h3>
-              <div class="break-horizontal"></div>
-              <p class="t-white margin-clear-10"><i class="tech-font tech-icon fab fa-android"></i><img class="tech-icon tech-icon-img" data-src="/public/img/logo/kotlin.png"/><i class="tech-font tech-icon fab fa-node-js"></i><img class="tech-icon tech-icon-img" data-src="/public/img/logo/parse.png"/><img class="tech-icon tech-icon-img" data-src="/public/img/logo/firebase.png"/>
-              </p>
-              <p class="t-white t-flow">Aplicación cliente para sistema clon de UberEats. Integra interacciones en tiempo real, ubicación en vivo, pagos online, calificaciones y arquitectura MVVM
-              </p>
-              <p class="center margin-top-10"><a class="btn btn-white-border waves-effect waves-light margin-all-5" href="https://atumesa.brounieapps.com">Ver proyecto</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="b-grad-right-down-pink-orange magic-card magic-card-home magic-card-home-5 center-content">
-        <div class="width-pct-100">
-          <div class="row c">
-            <div class="col l7 m8 offset-m2 s12 margin-bottom-10">
-              <div class="swiper-card swiper-container">
-                <div class="swiper-wrapper">               
-                  <div class="swiper-slide"><img class="responsive-img" data-src="/public/img/projects/atumesa_restaurant_tablet1_optimized.png"></div>
-                  <div class="swiper-slide"><img class="responsive-img" data-src="/public/img/projects/atumesa_restaurant_tablet2_optimized.png"></div>
-                  <div class="swiper-slide"><img class="responsive-img" data-src="/public/img/projects/atumesa_restaurant_tablet3_optimized.png"></div>
-                </div>
-              </div>
-            </div>
-            <div class="col l5 m10 offset-m1 s12">
-              <h3 class="magic-card-title">ATuMesa&nbsp<span class="magic-card-subtitle">Abogados</span>
-              </h3>
-              <div class="break-horizontal"></div>
-              <p class="t-white margin-clear-10"><i class="tech-font tech-icon fab fa-android"></i><img class="tech-icon tech-icon-img" data-src="/public/img/logo/kotlin.png"/><i class="tech-font tech-icon fab fa-node-js"></i><img class="tech-icon tech-icon-img" data-src="/public/img/logo/parse.png"/><img class="tech-icon tech-icon-img" data-src="/public/img/logo/firebase.png"/>
-              </p>
-              <p class="t-white t-flow">Aplicación de restaurante para sistema clon de UberEats. Integra interacciones en tiempo real, manejo de menú y arquitectura MVVM
-              </p>
-              <p class="center margin-top-10"><a class="btn btn-white-border waves-effect waves-light margin-all-5" href="https://atumesa.brounieapps.com">Ver proyecto</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="b-grad-right-down-pink-orange magic-card magic-card-home magic-card-home-6 center-content">
-        <div class="width-pct-100">
-          <div class="row c">
-            <div class="col l7 m8 offset-m2 s12 margin-bottom-10">
-              <div class="swiper-card swiper-container">
-                <div class="swiper-wrapper">               
-                  <div class="swiper-slide center"><img class="width-pct-45" data-src="/public/img/projects/mydrivers_phone1_optimized.png"><img class="width-pct-45" data-src="/public/img/projects/mydrivers_phone2_optimized.png"></div>
-                  <div class="swiper-slide center"><img class="width-pct-45" data-src="/public/img/projects/mydrivers_phone3_optimized.png"><img class="width-pct-45" data-src="/public/img/projects/mydrivers_phone4_optimized.png"></div>
-                  <div class="swiper-slide center"><img class="width-pct-45" data-src="/public/img/projects/mydrivers_phone5_optimized.png"><img class="width-pct-45" data-src="/public/img/projects/mydrivers_phone6_optimized.png"></div>
-                </div>
-              </div>
-            </div>
-            <div class="col l5 m10 offset-m1 s12">
-              <h3 class="magic-card-title">MyDrivers
-              </h3>
-              <div class="break-horizontal"></div>
-              <p class="t-white margin-clear-10"><i class="tech-font tech-icon fab fa-android"></i><img class="tech-icon tech-icon-img" data-src="/public/img/logo/kotlin.png"/><i class="tech-font tech-icon fab fa-node-js"></i><img class="tech-icon tech-icon-img" data-src="/public/img/logo/parse.png"/><img class="tech-icon tech-icon-img" data-src="/public/img/logo/firebase.png"/>
-              </p>
-              <p class="t-white t-flow">Aplicación de servicios de transporte. Integra chat, ubicación en vivo, manejo jerárquico de usuarios y arquitectura MVP
-              </p>
-              <p class="center margin-top-10"><a class="btn btn-white-border waves-effect waves-light margin-all-5" href="https://mydrivers.brounieapps.com">Ver proyecto</a>
-              </p>
-            </div>
+          <div class="col l5 m10 offset-m1 s12">
+            <h3 class="magic-card-title">CoronaVega&nbsp<span class="magic-card-subtitle">Abogados</span>
+            </h3>
+            <div class="break-horizontal"></div>
+            <p class="t-white margin-clear-10"><i class="tech-font tech-icon fab fa-js-square"></i><i
+                class="tech-font tech-icon fab fa-sass" style="margin-left: -2px; "></i><img
+                class="tech-icon tech-icon-img" data-src="/public/img/logo/pug.png" /><i
+                class="tech-font tech-icon fab fa-node-js"></i><img class="tech-icon tech-icon-img"
+                data-src="/public/img/logo/parse.png" />
+            </p>
+            <p class="t-white t-flow">Plataforma web responsiva para manejo de marcas registradas, monitoreo y
+              reporteo<br /><br />Crea y manda reportes automáticamente para 1,000+ clientes
+            </p>
+            <p class="center margin-top-10"><a class="btn btn-white-border waves-effect waves-light margin-all-5"
+                href="https://coronavega.online">Ver proyecto</a>
+            </p>
           </div>
         </div>
       </div>
     </div>
-    <div class="section section-home section-contact center-content margin-top-vh-10" id="contact">
-      <div class="content row c">
-        <div class="col s12 center hide-magic-cards-home">
-          <h3 class="title t-xxl">¡Es tu día de suerte!</h3>
-          <h3 class="title t-xxl margin-top-20">🎉🎊🎉🎊🎉🎊</h3>
-          <p class="title t-l margin-top-20 t-spaced">Acabas de encontrar el desarrollador que estabas buscando 😉<br>Ahora, hablemos de tus ideas</p><a class="btn waves-effect waves-light padding-sides-30 margin-top-20" href="mailto:kevin@aragoncodes.com">👉 Hablemos 👈</a>
+    <div class="b-grad-right-down-pink-purple magic-card magic-card-home magic-card-home-3 center-content">
+      <div class="width-pct-100">
+        <div class="row c">
+          <div class="col l7 m8 offset-m2 s12 margin-bottom-10"><img class="responsive-img"
+              data-src="/public/img/projects/emaily_bundle0_optimized.png"></div>
+          <div class="col l5 m10 offset-m1 s12">
+            <h3 class="magic-card-title">Emaily
+            </h3>
+            <div class="break-horizontal"></div>
+            <p class="t-white margin-clear-10"><i class="tech-font tech-icon fab fa-react"></i><i
+                class="tech-font tech-icon fab fa-js-square"></i><i class="tech-font tech-icon fab fa-node-js"></i><i
+                class="tech-font tech-icon fas fa-database"></i><img class="tech-icon tech-icon-img"
+                data-src="/public/img/logo/mongodb.png" style="margin-left: -4px;" />
+            </p>
+            <p class="t-white t-flow">Plataforma web reactiva (React) para mandar emails de retroalimentación de manera
+              masiva, integrando pagos online, Google Auth y Webhooks<br /><br />Creada con enfoque en funcionalidad,
+              sobre diseño
+            </p>
+            <p class="center margin-top-10"><a class="btn btn-white-border waves-effect waves-light margin-all-5"
+                href="https://damp-depths-80850.herokuapp.com">Ver proyecto</a><a
+                class="btn btn-white-border waves-effect waves-light margin-all-5"
+                href="https://github.com/AragonCodes/emaily">Ver código</a>
+            </p>
+          </div>
         </div>
       </div>
-      <div class="margin-bg"></div>
-      <div class="position-absolute z-bottom z-left" id="footer">
-        <p><a class="link-white margin-bottom-10" href="https://github.com/AragonCodes/aragoncodes.github.io">Ver código del sitio</a></p>
-        <p> <a class="link-white margin-bottom-10" href="https://github.com/AragonCodes">Coding is fun @AragonCodes</a></p>
-        <p><a class="link-white" href="mailto:kevin@aragoncodes.com">Tel: +(52) 614 286 8780<br class="hide-on-med-and-up"><span class="link-white hide-on-small-only">&nbsp&nbsp|&nbsp&nbsp</span>kevin@aragoncodes.com</a></p>
+    </div>
+    <div class="b-grad-right-down-pink-orange magic-card magic-card-home magic-card-home-4 center-content">
+      <div class="width-pct-100">
+        <div class="row c">
+          <div class="col l7 m8 offset-m2 s12 margin-bottom-10">
+            <div class="swiper-card swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide center"><img class="width-pct-45"
+                    data-src="/public/img/projects/atumesa_phone1_optimized.png"><img class="width-pct-45"
+                    data-src="/public/img/projects/atumesa_phone2_optimized.png"></div>
+                <div class="swiper-slide center"><img class="width-pct-45"
+                    data-src="/public/img/projects/atumesa_phone3_optimized.png"><img class="width-pct-45"
+                    data-src="/public/img/projects/atumesa_phone4_optimized.png"></div>
+                <div class="swiper-slide center"><img class="width-pct-45"
+                    data-src="/public/img/projects/atumesa_phone5_optimized.png"><img class="width-pct-45"
+                    data-src="/public/img/projects/atumesa_phone6_optimized.png"></div>
+                <div class="swiper-slide center"><img class="width-pct-45"
+                    data-src="/public/img/projects/atumesa_phone7_optimized.png"><img class="width-pct-45"
+                    data-src="/public/img/projects/atumesa_phone8_optimized.png"></div>
+                <div class="swiper-slide center"><img class="width-pct-45"
+                    data-src="/public/img/projects/atumesa_phone9_optimized.png"><img class="width-pct-45"
+                    data-src="/public/img/projects/atumesa_phone10_optimized.png"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col l5 m10 offset-m1 s12">
+            <h3 class="magic-card-title">ATuMesa
+            </h3>
+            <div class="break-horizontal"></div>
+            <p class="t-white margin-clear-10"><i class="tech-font tech-icon fab fa-android"></i><img
+                class="tech-icon tech-icon-img" data-src="/public/img/logo/kotlin.png" /><i
+                class="tech-font tech-icon fab fa-node-js"></i><img class="tech-icon tech-icon-img"
+                data-src="/public/img/logo/parse.png" /><img class="tech-icon tech-icon-img"
+                data-src="/public/img/logo/firebase.png" />
+            </p>
+            <p class="t-white t-flow">Aplicación cliente para sistema clon de UberEats. Integra interacciones en tiempo
+              real, ubicación en vivo, pagos online, calificaciones y arquitectura MVVM
+            </p>
+            <p class="center margin-top-10"><a class="btn btn-white-border waves-effect waves-light margin-all-5"
+                href="https://atumesa.brounieapps.com">Ver proyecto</a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="modal modal-hey-kevin padding-all-30 rounded-8 center width-max-500">
-      <h3 class="title t-xl">¡Es tu día de suerte!</h3>
-      <h3 class="title t-xl" style="margin: 20px 0 !important;">🎉🎊🎉🎊🎉🎊</h3>
-      <p class="title t-l t-spaced" style="margin-bottom: 20px !important;">Estoy en busca de trabajo<br>Y acabas de econtrar el desarrollador
-        &nbsp            <br class="hide-on-small-only">perfecto para tu equipo 🏆
+    <div class="b-grad-right-down-pink-orange magic-card magic-card-home magic-card-home-5 center-content">
+      <div class="width-pct-100">
+        <div class="row c">
+          <div class="col l7 m8 offset-m2 s12 margin-bottom-10">
+            <div class="swiper-card swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img class="responsive-img"
+                    data-src="/public/img/projects/atumesa_restaurant_tablet1_optimized.png"></div>
+                <div class="swiper-slide"><img class="responsive-img"
+                    data-src="/public/img/projects/atumesa_restaurant_tablet2_optimized.png"></div>
+                <div class="swiper-slide"><img class="responsive-img"
+                    data-src="/public/img/projects/atumesa_restaurant_tablet3_optimized.png"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col l5 m10 offset-m1 s12">
+            <h3 class="magic-card-title">ATuMesa&nbsp<span class="magic-card-subtitle">Abogados</span>
+            </h3>
+            <div class="break-horizontal"></div>
+            <p class="t-white margin-clear-10"><i class="tech-font tech-icon fab fa-android"></i><img
+                class="tech-icon tech-icon-img" data-src="/public/img/logo/kotlin.png" /><i
+                class="tech-font tech-icon fab fa-node-js"></i><img class="tech-icon tech-icon-img"
+                data-src="/public/img/logo/parse.png" /><img class="tech-icon tech-icon-img"
+                data-src="/public/img/logo/firebase.png" />
+            </p>
+            <p class="t-white t-flow">Aplicación de restaurante para sistema clon de UberEats. Integra interacciones en
+              tiempo real, manejo de menú y arquitectura MVVM
+            </p>
+            <p class="center margin-top-10"><a class="btn btn-white-border waves-effect waves-light margin-all-5"
+                href="https://atumesa.brounieapps.com">Ver proyecto</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="b-grad-right-down-pink-orange magic-card magic-card-home magic-card-home-6 center-content">
+      <div class="width-pct-100">
+        <div class="row c">
+          <div class="col l7 m8 offset-m2 s12 margin-bottom-10">
+            <div class="swiper-card swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide center"><img class="width-pct-45"
+                    data-src="/public/img/projects/mydrivers_phone1_optimized.png"><img class="width-pct-45"
+                    data-src="/public/img/projects/mydrivers_phone2_optimized.png"></div>
+                <div class="swiper-slide center"><img class="width-pct-45"
+                    data-src="/public/img/projects/mydrivers_phone3_optimized.png"><img class="width-pct-45"
+                    data-src="/public/img/projects/mydrivers_phone4_optimized.png"></div>
+                <div class="swiper-slide center"><img class="width-pct-45"
+                    data-src="/public/img/projects/mydrivers_phone5_optimized.png"><img class="width-pct-45"
+                    data-src="/public/img/projects/mydrivers_phone6_optimized.png"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col l5 m10 offset-m1 s12">
+            <h3 class="magic-card-title">MyDrivers
+            </h3>
+            <div class="break-horizontal"></div>
+            <p class="t-white margin-clear-10"><i class="tech-font tech-icon fab fa-android"></i><img
+                class="tech-icon tech-icon-img" data-src="/public/img/logo/kotlin.png" /><i
+                class="tech-font tech-icon fab fa-node-js"></i><img class="tech-icon tech-icon-img"
+                data-src="/public/img/logo/parse.png" /><img class="tech-icon tech-icon-img"
+                data-src="/public/img/logo/firebase.png" />
+            </p>
+            <p class="t-white t-flow">Aplicación de servicios de transporte. Integra chat, ubicación en vivo, manejo
+              jerárquico de usuarios y arquitectura MVP
+            </p>
+            <p class="center margin-top-10"><a class="btn btn-white-border waves-effect waves-light margin-all-5"
+                href="https://mydrivers.brounieapps.com">Ver proyecto</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section section-home section-contact center-content margin-top-vh-10" id="contact">
+    <div class="content row c">
+      <div class="col s12 center hide-magic-cards-home">
+        <h3 class="title t-xxl">¡Es tu día de suerte!</h3>
+        <h3 class="title t-xxl margin-top-20">🎉🎊🎉🎊🎉🎊</h3>
+        <p class="title t-l margin-top-20 t-spaced">Acabas de encontrar el desarrollador que estabas buscando
+          😉<br>Ahora, hablemos de tus ideas</p><a class="btn waves-effect waves-light padding-sides-30 margin-top-20"
+          href="mailto:kevin@aragoncodes.com">👉 Hablemos 👈</a>
+      </div>
+    </div>
+    <div class="margin-bg"></div>
+    <div class="position-absolute z-bottom z-left" id="footer">
+      <p><a class="link-white margin-bottom-10" href="https://github.com/AragonCodes/aragoncodes.github.io">Ver código
+          del sitio</a></p>
+      <p> <a class="link-white margin-bottom-10" href="https://github.com/AragonCodes">Coding is fun @AragonCodes</a>
       </p>
-      <div class="row c">
-        <div class="col m6 s12"><a class="btn waves-effect waves-light margin-bottom-10" href="mailto:kevin@aragoncodes.com">Contactar 📬</a></div>
-        <div class="col m6 s12"><a class="btn waves-effect waves-light" download href="/public/docs/Resume_KevinAragon.pdf">Curriculum 📥</a></div>
-      </div>
+      <p><a class="link-white" href="mailto:kevin@aragoncodes.com">Tel: +(52) 614 286 8780<br
+            class="hide-on-med-and-up"><span
+            class="link-white hide-on-small-only">&nbsp&nbsp|&nbsp&nbsp</span>kevin@aragoncodes.com</a></p>
     </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js" type="text/javascript"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js" type="text/javascript"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js" type="text/javascript"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js" type="text/javascript"></script>
-    <script src="/public/js/main.js" type="text/javascript"></script>
-  </body>
+  </div>
+  <div class="modal modal-hey-kevin padding-all-30 rounded-8 center width-max-500">
+    <h3 class="title t-xl">¡Es tu día de suerte!</h3>
+    <h3 class="title t-xl" style="margin: 20px 0 !important;">🎉🎊🎉🎊🎉🎊</h3>
+    <p class="title t-l t-spaced" style="margin-bottom: 20px !important;">Estoy en busca de trabajo<br>Y acabas de
+      econtrar el desarrollador
+      &nbsp <br class="hide-on-small-only">perfecto para tu equipo 🏆
+    </p>
+    <div class="row c">
+      <div class="col m6 s12"><a class="btn waves-effect waves-light margin-bottom-10"
+          href="mailto:kevin@aragoncodes.com">Contactar 📬</a></div>
+      <div class="col m6 s12"><a class="btn waves-effect waves-light" download
+          href="/public/docs/Resume_KevinAragon.pdf">Curriculum 📥</a></div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+    type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js" type="text/javascript"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js" type="text/javascript"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"
+    type="text/javascript"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"
+    type="text/javascript"></script>
+  <script src="/public/js/main.js" type="text/javascript"></script>
+</body>
+
 </html>
